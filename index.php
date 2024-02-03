@@ -20,10 +20,9 @@ $data = [
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
-    echo "Hello, " . htmlspecialchars($name) . " Welcome to your banking homepage!"; ?>
-    <p> I want to be able to see this paragraph<p>
+    echo "<main> Hello, " . htmlspecialchars($name) . " Welcome to your banking homepage!"; ?>
+    <p> I want to be able to see this paragraph<p></main>
     <?php include_once('src/views/nav.view.php') ?>
-    
     
     
     
@@ -37,7 +36,7 @@ else {
     <form method="post" action="" autocomplete="off">
         <div id="formtitle"><h2>Log in!</h2></div>
         Name: <input type="text" name="name" required><br>
-        Password: <input type="text" name="password" required><br>
+        Password: <input type="password" name="password" required><br>
 
         <input type="submit" value="Sign In">
     </form>
@@ -56,7 +55,7 @@ else {
 
 
 
-<p></p>
+
 
 
 <!-- <form action="index.php" method="post">
