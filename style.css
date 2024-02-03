@@ -4,17 +4,21 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
+
 }
 h1 {
     text-align: center;
     font-weight: bold;
     font-size: 50px;
-    margin: 40px;
-    background-color: grey;
+    /* margin: 40px; */
+    background-color: rgb(0, 0, 0);
+    color: white;
     padding: 50px;
     /* background-image:; */
     background-repeat: no-repeat; 
+    width: 100%;
 } 
+
 main {
     margin-top: 100px;
     margin-bottom: 50px;
@@ -24,9 +28,10 @@ main {
     img {
         left: 0;
         top: 0;
-        width: 50px;
-        height: 50px;
+        width: 400px;
+        height: 400px;
         object-fit: cover;
+        z-index: 1;
     }
 
   form {
@@ -35,11 +40,11 @@ main {
     padding: 50px;
     border: 1px solid black;
     width: 100%;
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
   }
 
   input[type=button], input[type=submit], input[type=reset] {
-    background-color: #333333;
+    background-color: #000000;
     border: none;
     color: white;
     padding: 15px 15px;
@@ -47,6 +52,11 @@ main {
     margin: 4px 2px;
     cursor: pointer;
   }
+  input[type=button]:hover {
+    background-color: white;
+    color: black;
+  }
+
   input[type=text], input[type=password] {
     background-color: #bebebe;
     color: rgb(0, 0, 0);
@@ -67,6 +77,7 @@ main {
     height: 50px;
     color: #ffffff;
   }
+
   nav {
     text-align: center;
     font-weight: bold;
@@ -81,9 +92,11 @@ main {
     padding: 50px;
 
   }
+
   nav li {
     display:inline
   }
+
   nav a {
       text-decoration: none;
       /* margin-left: 10px;
@@ -93,6 +106,7 @@ main {
       padding: 14px 16px;
 
   }
+
   nav a.nav-item {
     font-size: 1.25em;
     display: inline;
@@ -101,9 +115,11 @@ main {
   nav a:link {
   color: rgb(255, 255, 255)
   }
+
   nav a:visited {
   color: #9e9e9e;
   }
+
   nav a:hover {
   color: #000000;
   /* padding: 40px;
@@ -116,6 +132,7 @@ main {
     padding: 0;
     list-style-type: none;
   }
+  
 #formtitle {
     text-align: center;
     font-weight: bold;
