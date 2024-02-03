@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 40px;
+    background-color: grey;
+    padding: 50px;
+    background-image:;
+    background-repeat: no-repeat; 
+} 
+    img {
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+
+  form {
+      /* text-align: center; */
+    margin-top: 200px;
+    padding: 50px;
+    border: 1px solid black;
+    width: 100%;
+    background-color: grey;
+  }
+
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type=text] {
+    background-color: #bebebe;
+    color: rgb(0, 0, 0);
+  }
+
+
+  footer {
+    background-color: #000000;
+    font-size: .60em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border-top: #000000 2px;
+    border-style: solid;  */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    color: #ffffff;
+  }
+  nav {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: #000000;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding: 50px;
+
+  }
+  nav li {
+    display:inline
+  }
+  nav a {
+      text-decoration: none;
+      /* margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 20px; */
+      text-align: center;
+      padding: 14px 16px;
+
+  }
+  nav a.nav-item {
+    font-size: 1.25em;
+    display: inline;
+  }
+  
+  nav a:link {
+  color: rgb(255, 255, 255)
+  }
+  nav a:visited {
+  color: #9e9e9e;
+  }
+  nav a:hover {
+  color: #000000;
+  /* padding: 40px;
+  padding-top: 50px; */
+  /* display: block; */
+  background-color: rgb(255, 255, 255);
+  }
+
+  nav ul {
+    padding: 0;
+    list-style-type: none;
+  }
+#formtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
