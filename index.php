@@ -1,68 +1,29 @@
-<?php 
-// displays main information displayed on each page
+<?php
+session_start();
+$config = parse_ini_file('config.ini', true);
+$environment = $config['ENVIRONMENT'];
+$URL_BASE = $config[$environment]['URL_BASE'];
+define('URL_ROOT', "$URL_BASE");
+define('APP_ROOT', dirname(__FILE__,1));
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Form submitted, retrieve data and store it in a session variable
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = $_POST['password'];
+    $_SESSION['checkings'] = 124 * strlen($_SESSION['username']) % 101;
+    $_SESSION['savings'] = 379 * strlen($_SESSION['password']) %305;
+    
+    // Redirect to display.php
+    header('Location: src/articles/account.php');
+    exit(); // Ensure that script execution stops after the redirect header
+}
+
 $data = [
     'pageTitle' => 'AWP Bank | Home',
-    'header' => 'Home',
-    'displayName' => 'Welcome <?php echo $_POST["username"]; ?><br>',
-    'displayEmail' => 'Your email address is: <?php echo $_POST["email"]; ?>',
-    'maincontent' => [
-
-    ]
-
+    'header' => 'AWP Bank',
+    'stylesheet' => "style.css"
 ];
-
-
-
-
-?>
-
-<!-- checks if the form has been submitted, and if so displays the homepage with nav bar -->
-<?php
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    echo "<main> Hello, " . htmlspecialchars($name) . " Welcome to your banking homepage!"; ?>
-    <p> I want to be able to see this paragraph<p></main>
-    <?php include_once('src/views/nav.view.php') ?>
-    
-    
-    
-    <?php
-}
-
-else {
-?>
-<!-- form to be displayed until all information is filled out, loads first on the main web-page -->
-<h1>Welcome to AWP Bank!</h1>
-    <form method="post" action="" autocomplete="off">
-        <div id="formtitle"><h2>Log in!</h2></div>
-        Name: <input type="text" name="name" required><br>
-        Password: <input type="password" name="password" required><br>
-
-        <input type="submit" value="Sign In">
-    </form>
-<?php
-}
-?>
-
-
-
-
-
-
-
-
-<?php include_once('src/views/head.view.php') ?>
-
-
-
-
-
-
-<!-- <form action="index.php" method="post">
-Userame: <input type="text" name="username"><br>
-Password: <input type="text" name="password"><br>
-<input type="submit">
-</form> -->
-
-
-<?php include_once('src/views/footer.view.php') ?>
+include_once('src/views/head.view.php');
+include_once('src/views/header.view.php');
+include_once('src/views/login.view.php'); 
+include_once('src/views/footer.view.php');
