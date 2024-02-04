@@ -6,15 +6,19 @@
     
 
 }
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
-    text-align: center;
+    text-align: left;
     font-weight: bold;
     font-size: 50px;
-    /* margin: 40px; */
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 50px;
-    /* background-image:; */
     background-repeat: no-repeat; 
     width: 100%;
 } 
@@ -35,12 +39,11 @@ main {
     }
 
   form {
-      /* text-align: center; */
     margin-top: 200px;
     padding: 50px;
     border: 1px solid black;
-    width: 100%;
     background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px;
   }
 
   input[type=button], input[type=submit], input[type=reset] {
@@ -69,27 +72,29 @@ main {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    width: 100%;
     /* border-top: #000000 2px;
     border-style: solid;  */
-    width: 100%;
     position: fixed;
     bottom: 0;
     height: 50px;
     color: #ffffff;
+
   }
 
   nav {
+    /* margin-top: 150px; */
     text-align: center;
     font-weight: bold;
     font-size: 1.5em;
     background-color: #000000;
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    /* z-index: 1; */
+    height: 75px;
+    /* width: 100%; */
+    /* position: fixed; */
     top: 0;
     /* overflow-x: hidden; */
-    padding: 50px;
+    padding-top: 12px;
+    border-top: 1px solid white;
 
   }
 
@@ -99,11 +104,11 @@ main {
 
   nav a {
       text-decoration: none;
-      /* margin-left: 10px;
+      margin-left: 10px;
       margin-right: 10px;
-      margin-top: 20px; */
+      margin-top: 20px;
       text-align: center;
-      padding: 14px 16px;
+      padding: 14px;
 
   }
 
@@ -124,7 +129,6 @@ main {
   color: #000000;
   /* padding: 40px;
   padding-top: 50px; */
-  /* display: block; */
   background-color: rgb(255, 255, 255);
   }
 
@@ -137,4 +141,13 @@ main {
     text-align: center;
     font-weight: bold;
     font-size: 18px;
+}
+img {
+  position: absolute;
+  z-index: 2;
+  float: right;
+  right: 0;
+  top: 0;
+  
+
 }

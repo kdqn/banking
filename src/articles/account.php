@@ -13,7 +13,7 @@ $savings = (isset($_SESSION['savings'])) ? $_SESSION['savings'] : '';
 
 $data = 
     [
-        'pageTitle' => 'AWP Bank | Account',
+        'pageTitle' => 'AWP Bank | Accounts',
         'header' => 'AWP Bank',
     ];
 
