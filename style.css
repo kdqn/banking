@@ -6,6 +6,12 @@
     
 
 }
+.profiledisplay {
+  text-align: center;
+  font-size: 25px;
+}
+
+
 
 header {
   margin: 0;
@@ -25,7 +31,7 @@ h1 {
 
 main {
     margin-top: 100px;
-    margin-bottom: 50px;
+    /* margin-bottom: 10px; */
 }
 
 
