@@ -6,6 +6,9 @@ $URL_BASE = $config[$environment]['URL_BASE'];
 define('URL_ROOT', "$URL_BASE");
 define('APP_ROOT', dirname(__FILE__,2));
 
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Process the form using the function, passing both $_POST and the selected ID
     $result = processForm($_POST);
@@ -25,7 +28,7 @@ function processFORM($postDATA)
             }
             else
             {
-                return "CANNOT GO NEGATIVE";
+                return "CANNOT GO NEGATIVE!";
             }
         }
         else
@@ -37,7 +40,7 @@ function processFORM($postDATA)
             }
             else
             {
-                return "CANNOT GO NEGATIVE";
+                return "CANNOT GO NEGATIVE!";
             }
         }
     }
