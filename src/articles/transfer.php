@@ -9,7 +9,7 @@ define('APP_ROOT', dirname(__FILE__,2));
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Process the form using the function, passing both $_POST and the selected ID
     $result = processForm($_POST);
-    echo "<script type='text/javascript'>alert('$result');</script>";
+    echo $result;
 }
 
 function processFORM($postDATA)
@@ -25,7 +25,7 @@ function processFORM($postDATA)
             }
             else
             {
-                return "CANNOT GO NEGATIVE";
+                return "<script type='text/javascript'>alert('CANNOT GO NEGATIVE');</script>";
             }
         }
         else
@@ -37,13 +37,13 @@ function processFORM($postDATA)
             }
             else
             {
-                return "CANNOT GO NEGATIVE";
+                return "<script type='text/javascript'>alert('CANNOT GO NEGATIVE');</script>";
             }
         }
     }
     else
     {
-        return "NO ACCOUNTS";
+        return "<script type='text/javascript'>alert('NO ACCOUNTS');</script>";
     }
 }
 
