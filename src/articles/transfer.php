@@ -63,7 +63,7 @@ include_once(APP_ROOT . '/views/header.view.php');
 include_once(APP_ROOT . '/views/nav.view.php');
 ?>
 
-<main>
+<main class="profiledisplay">
     <?php echo "Welcome <b>$username1 </b><br>
     Checkings = $$checking<br>
     Savings = $$savings<br><br>"
